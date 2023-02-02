@@ -14,6 +14,18 @@ resource "aws_security_group" "sg" {
       security_groups = var.sgs_acesso[*]
     }
   }
+  
+  dynamic "ingress" {
+    for_each = var.ingress_ports
+    iterator = port
+    content {
+      from_port   = port.value
+      to_port     = port.value
+      protocol    = "udp"
+      cidr_blocks = var.cdirs_acesso[*]
+      security_groups = var.sgs_acesso[*]
+    }
+  }
 
   egress {
     description = "Allow internet connection"
