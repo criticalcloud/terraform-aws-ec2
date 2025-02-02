@@ -17,8 +17,6 @@ variable "zona" {}
 
 variable "subnet_id" {}
 
-variable "vpc_id" {}
-
 variable "disk_size" {}
 
 variable "tag" {}
