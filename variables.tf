@@ -1,17 +1,5 @@
 variable "ami" {}
 
-variable "cdirs_acesso" {
-  type = list(any)
-}
-
-variable "sgs_acesso" {
-  type = list(any)
-}
-
-variable "ingress_ports" {
-  type = list(any)
-}
-
 variable "user_data" {
   type = string
   default = ""
