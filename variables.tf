@@ -20,3 +20,5 @@ variable "subnet_id" {}
 variable "disk_size" {}
 
 variable "tag" {}
+
+variable "vpc_id" {}
